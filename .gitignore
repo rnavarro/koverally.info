@@ -1,0 +1,7 @@
+# Hugo build artifacts (regenerated on every build; Cloudflare Pages builds these)
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Editor / IDE
+/.idea/
