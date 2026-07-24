@@ -6,4 +6,4 @@ If you would like to propose a new layout using Hugo, please submit a pull reque
 
 Once a pull request is merged, the build is automated through Cloudflare pages and will be live almost instantly.
 
-If you are interested in taking over the entire project and domain name, please reach out to me.  I would like to see it flourish and thrive, as I don't have much time to work on it.
+If you're not technical or aren't sure how to open a pull request, no problem: open an issue instead and describe what you'd like to add or change. We can talk it through there and I'm happy to make the edits for you.
