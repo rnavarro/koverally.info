@@ -1,5 +1,5 @@
 baseURL = 'https://koverally.info'
-languageCode = 'en-us'
+locale = 'en-us'
 title = 'Kove Rally Wiki Page'
 theme = 'hugo-book'
 enableGitInfo = true
@@ -22,21 +22,18 @@ enableGitInfo = true
   BookSection = '*'
 
   # Set source repository location.
-  # Used for 'Last Modified' and 'Edit this page' links.
+  # Consumed by the BookLastChangeLink / BookEditLink URL templates below.
   BookRepo = 'https://github.com/rnavarro/koverally.info'
 
+  # 'Last modified' date link in the page footer. Requires enableGitInfo = true.
+  # URL template; {{ .GitInfo.Hash }} is the page's last-change commit.
+  # (Replaces the old BookCommitPath param from the pre-2026 theme.)
+  BookLastChangeLink = '{{ .Site.Params.BookRepo }}/commit/{{ .GitInfo.Hash }}'
 
-  # Specifies commit portion of the link to the page's last modified commit hash for 'doc' page
-  # type.
-  # Required if 'BookRepo' param is set.
-  # Value used to construct a URL consisting of BookRepo/BookCommitPath/<commit-hash>
-  # Github uses 'commit', Bitbucket uses 'commits'
-  BookCommitPath = 'commit'
-
-  # Enable 'Edit this page' links for 'doc' page type.
-  # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
-  # Path must point to the site directory.
-  BookEditPath = 'edit/main'
+  # 'Edit this page' link in the page footer.
+  # URL template; {{ .Path }} is the page's source file path (content at repo root).
+  # (Replaces the old BookEditPath param from the pre-2026 theme.)
+  BookEditLink = '{{ .Site.Params.BookRepo }}/edit/main/{{ .Path }}'
 
   # (Optional, default January 2, 2006) Configure the date format used on the pages
   # - In git information
